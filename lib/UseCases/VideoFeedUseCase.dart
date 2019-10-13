@@ -16,18 +16,3 @@ class VideoFeedUseCase {
     }
   }
 }
-
-
-// FutureBuilder<VideoFeed>(
-//   future: fetchPost(),
-//   builder: (context, snapshot) {
-//     if (snapshot.hasData) {
-//       return Text(snapshot.data.title);
-//     } else if (snapshot.hasError) {
-//       return Text("${snapshot.error}");
-//     }
-
-//     // By default, show a loading spinner.
-//     return CircularProgressIndicator();
-//   },
-// );
