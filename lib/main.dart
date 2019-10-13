@@ -25,12 +25,9 @@ class RealWorlState extends State<RealWorldApp> {
 
   _loadData() {
     useCase.fetchPost().then((value) {
-      setState(() {
+      setState(() { // refresh
         _isLoading = false;
         _feed = value;
-
-        var r = _feed.videos != null ? _feed.videos : "No data";
-        print(r);
       });
     });
   }
@@ -65,7 +62,6 @@ class RealWorlState extends State<RealWorldApp> {
                               padding: EdgeInsets.all(0),
                               child: new VideoCell(video),
                               onPressed: () {
-                                print("selected!!!");
                                 Navigator.push(
                                     context,
                                     new MaterialPageRoute(
